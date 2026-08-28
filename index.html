@@ -2,8 +2,12 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JP Vault Video</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
       background: linear-gradient(180deg, #fffdfc 0%, #fff5f7 60%, #ffecf1 100%);
@@ -18,32 +22,34 @@
     .container {
       max-width: 600px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 16px;
       position: relative;
       z-index: 2;
     }
     h1 {
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: 8px;
       color: #7a3b57;
     }
     p.subtitle {
       color: #a0607c;
-      margin-bottom: 30px;
-      font-size: 15px;
+      margin-bottom: 24px;
+      font-size: 14px;
     }
     .search-area {
       background-color: rgba(255, 255, 255, 0.92);
       border-radius: 12px;
-      padding: 30px 20px;
+      padding: 24px 16px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     }
     input {
       padding: 12px;
-      width: 250px;
+      width: 100%;
+      max-width: 250px;
       border-radius: 8px;
       border: 1px solid #f0d0d8;
-      font-size: 14px;
+      font-size: 16px;
+      margin-bottom: 10px;
     }
     button {
       padding: 12px 24px;
@@ -67,8 +73,8 @@
       color: #b5497a;
       border: 1px solid #f5d0dd;
       border-radius: 20px;
-      padding: 8px 16px;
-      margin: 5px;
+      padding: 8px 14px;
+      margin: 4px;
       cursor: pointer;
       font-size: 13px;
     }
@@ -78,7 +84,7 @@
     .popular-area {
       background-color: rgba(255, 255, 255, 0.92);
       border-radius: 12px;
-      padding: 20px;
+      padding: 20px 16px;
       margin-top: 20px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       text-align: left;
@@ -139,6 +145,7 @@
       color: #999999;
       font-size: 12px;
       line-height: 1.6;
+      padding-bottom: 30px;
     }
     .bg-svg {
       position: absolute;
@@ -148,6 +155,25 @@
       height: 100%;
       z-index: 1;
       opacity: 0.9;
+    }
+    @media (max-width: 480px) {
+      body {
+        padding-top: 24px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      input {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 8px;
+      }
     }
   </style>
 </head>
