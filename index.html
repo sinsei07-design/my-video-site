@@ -75,6 +75,53 @@
     .tag-button:hover {
       background-color: #ffe0eb;
     }
+    .popular-area {
+      background-color: rgba(255, 255, 255, 0.92);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+    .popular-area h2 {
+      font-size: 16px;
+      color: #7a3b57;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+    .popular-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .popular-list li {
+      padding: 10px 8px;
+      border-bottom: 1px solid #f5e2e8;
+      cursor: pointer;
+      font-size: 14px;
+      color: #444444;
+      display: flex;
+      align-items: center;
+    }
+    .popular-list li:last-child {
+      border-bottom: none;
+    }
+    .popular-list li:hover {
+      background-color: #fff0f4;
+    }
+    .rank-num {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      background-color: #f472a0;
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
     .notice {
       margin-top: 30px;
       color: #999999;
@@ -152,6 +199,17 @@
         <button class="tag-button" onclick="quickSearch('高画質')">HD</button>
         <button class="tag-button" onclick="quickSearch('おすすめ')">Recommended</button>
       </div>
+    </div>
+
+    <div class="popular-area">
+      <h2>Popular searches</h2>
+      <ul class="popular-list">
+        <li onclick="quickSearch('コスプレ')"><span class="rank-num">1</span>Cosplay</li>
+        <li onclick="quickSearch('制服')"><span class="rank-num">2</span>School uniform</li>
+        <li onclick="quickSearch('和服')"><span class="rank-num">3</span>Kimono</li>
+        <li onclick="quickSearch('メイド')"><span class="rank-num">4</span>Maid</li>
+        <li onclick="quickSearch('巫女')"><span class="rank-num">5</span>Shrine maiden</li>
+      </ul>
     </div>
 
     <p class="notice">This site helps you search and discover content.<br>Search results are provided by external services.</p>
