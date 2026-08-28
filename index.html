@@ -6,28 +6,29 @@
   <style>
     body {
       font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
-      background-image: linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.75)), url('https://source.unsplash.com/1600x900/?sakura,cherryblossom');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
+      background: linear-gradient(180deg, #fffdfc 0%, #fff5f7 60%, #ffecf1 100%);
       color: #222222;
       text-align: center;
-      padding-top: 60px;
+      padding-top: 40px;
       margin: 0;
       min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
     }
     .container {
       max-width: 600px;
       margin: 0 auto;
       padding: 0 20px;
+      position: relative;
+      z-index: 2;
     }
     h1 {
       font-size: 32px;
       margin-bottom: 8px;
-      color: #333333;
+      color: #7a3b57;
     }
     p.subtitle {
-      color: #555555;
+      color: #a0607c;
       margin-bottom: 30px;
       font-size: 15px;
     }
@@ -35,7 +36,7 @@
       background-color: rgba(255, 255, 255, 0.92);
       border-radius: 12px;
       padding: 30px 20px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     }
     input {
       padding: 12px;
@@ -76,17 +77,64 @@
     }
     .notice {
       margin-top: 30px;
-      color: #666666;
+      color: #999999;
       font-size: 12px;
       line-height: 1.6;
-      background-color: rgba(255,255,255,0.7);
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 8px;
+    }
+    .bg-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.9;
     }
   </style>
 </head>
 <body>
+
+  <svg class="bg-svg" viewBox="0 0 680 500" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="petalR" cx="35%" cy="30%" r="75%">
+        <stop offset="0%" stop-color="#ffe6ee"/>
+        <stop offset="55%" stop-color="#ffc7dc"/>
+        <stop offset="100%" stop-color="#ff9dbf"/>
+      </radialGradient>
+      <g id="petalShape">
+        <path d="M0 0 C -9 -6, -12 -20, -3 -28 C 0 -31, 3 -31, 6 -28 C 12 -20, 9 -6, 0 0 Z" fill="url(#petalR)"/>
+      </g>
+    </defs>
+    <path d="M0 260 C 60 210, 120 230, 170 190 C 210 160, 250 150, 300 120" fill="none" stroke="#8a6a5f" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+    <path d="M680 300 C 610 260, 560 270, 520 230 C 490 200, 460 190, 420 165" fill="none" stroke="#8a6a5f" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+    <g transform="translate(190,175)" opacity="0.9">
+      <use href="#petalShape" transform="rotate(0)"/><use href="#petalShape" transform="rotate(72)"/><use href="#petalShape" transform="rotate(144)"/><use href="#petalShape" transform="rotate(216)"/><use href="#petalShape" transform="rotate(288)"/>
+      <circle r="5" fill="#ffd23f"/>
+    </g>
+    <g transform="translate(300,120) scale(0.85)" opacity="0.9">
+      <use href="#petalShape" transform="rotate(10)"/><use href="#petalShape" transform="rotate(82)"/><use href="#petalShape" transform="rotate(154)"/><use href="#petalShape" transform="rotate(226)"/><use href="#petalShape" transform="rotate(298)"/>
+      <circle r="5" fill="#ffd23f"/>
+    </g>
+    <g transform="translate(420,165) scale(0.85)" opacity="0.9">
+      <use href="#petalShape" transform="rotate(-15)"/><use href="#petalShape" transform="rotate(57)"/><use href="#petalShape" transform="rotate(129)"/><use href="#petalShape" transform="rotate(201)"/><use href="#petalShape" transform="rotate(273)"/>
+      <circle r="5" fill="#ffd23f"/>
+    </g>
+    <g transform="translate(520,230) scale(0.65)" opacity="0.85">
+      <use href="#petalShape" transform="rotate(5)"/><use href="#petalShape" transform="rotate(77)"/><use href="#petalShape" transform="rotate(149)"/><use href="#petalShape" transform="rotate(221)"/><use href="#petalShape" transform="rotate(293)"/>
+      <circle r="5" fill="#ffd23f"/>
+    </g>
+    <g transform="translate(80,230) scale(0.5)" opacity="0.8">
+      <use href="#petalShape" transform="rotate(0)"/><use href="#petalShape" transform="rotate(72)"/><use href="#petalShape" transform="rotate(144)"/><use href="#petalShape" transform="rotate(216)"/><use href="#petalShape" transform="rotate(288)"/>
+      <circle r="5" fill="#ffd23f"/>
+    </g>
+    <g fill="#ffc7dc" opacity="0.7">
+      <ellipse cx="80" cy="60" rx="7" ry="5" transform="rotate(30 80 60)"/>
+      <ellipse cx="380" cy="70" rx="7" ry="5" transform="rotate(50 380 70)"/>
+      <ellipse cx="600" cy="90" rx="7" ry="5" transform="rotate(-40 600 90)"/>
+      <ellipse cx="140" cy="300" rx="7" ry="5" transform="rotate(-20 140 300)"/>
+      <ellipse cx="450" cy="320" rx="7" ry="5" transform="rotate(10 450 320)"/>
+    </g>
+  </svg>
 
   <div class="container">
     <h1>JP Vault Video</h1>
@@ -115,11 +163,9 @@
       }
       openDmmSearch(keyword);
     }
-
     function quickSearch(keyword) {
       openDmmSearch(keyword);
     }
-
     function openDmmSearch(keyword) {
       var url = "https://www.dmm.co.jp/search/=/searchstr=" + encodeURIComponent(keyword) + "/";
       window.open(url, "_blank");
