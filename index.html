@@ -122,8 +122,20 @@
       margin-right: 10px;
       flex-shrink: 0;
     }
-    .notice {
+    .footer-links {
       margin-top: 30px;
+      font-size: 12px;
+    }
+    .footer-links a {
+      color: #a0607c;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .notice {
+      margin-top: 15px;
       color: #999999;
       font-size: 12px;
       line-height: 1.6;
@@ -210,6 +222,12 @@
         <li onclick="quickSearch('メイド')"><span class="rank-num">4</span>Maid</li>
         <li onclick="quickSearch('巫女')"><span class="rank-num">5</span>Shrine maiden</li>
       </ul>
+    </div>
+
+    <div class="footer-links">
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="privacy.html">Privacy Policy</a>
     </div>
 
     <p class="notice">This site helps you search and discover content.<br>Search results are provided by external services.</p>
