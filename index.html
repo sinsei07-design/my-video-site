@@ -5,67 +5,97 @@
   <title>JP Vault Video</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #1a1a1a;
-      color: #ffffff;
+      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f7f8fa;
+      color: #222222;
       text-align: center;
-      padding-top: 80px;
+      padding-top: 60px;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
     h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: #1a1a1a;
     }
-    p {
-      color: #cccccc;
+    p.subtitle {
+      color: #666666;
       margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .search-area {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     }
     input {
-      padding: 10px;
+      padding: 12px;
       width: 250px;
-      border-radius: 5px;
-      border: none;
+      border-radius: 8px;
+      border: 1px solid #dddddd;
+      font-size: 14px;
     }
     button {
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 12px 24px;
+      border-radius: 8px;
       border: none;
-      background-color: #e63946;
+      background-color: #3b82f6;
       color: white;
       font-weight: bold;
-      margin-left: 10px;
+      margin-left: 8px;
       cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #2563eb;
     }
     .tags {
-      margin-top: 40px;
+      margin-top: 20px;
     }
     .tag-button {
-      background-color: #333333;
-      color: #ffffff;
-      border: 1px solid #555555;
+      background-color: #f0f2f5;
+      color: #333333;
+      border: 1px solid #e0e0e0;
       border-radius: 20px;
       padding: 8px 16px;
       margin: 5px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 13px;
     }
     .tag-button:hover {
-      background-color: #e63946;
-      border-color: #e63946;
+      background-color: #e5e7eb;
+    }
+    .notice {
+      margin-top: 30px;
+      color: #999999;
+      font-size: 12px;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
 
-  <h1>JP Vault Video</h1>
-  <p>Search Japanese videos and images</p>
+  <div class="container">
+    <h1>JP Vault Video</h1>
+    <p class="subtitle">Discover and search Japanese videos, made simple</p>
 
-  <input type="text" id="searchBox" placeholder="Search...">
-  <button onclick="doSearch()">Search</button>
+    <div class="search-area">
+      <input type="text" id="searchBox" placeholder="Search...">
+      <button onclick="doSearch()">Search</button>
 
-  <div class="tags">
-    <button class="tag-button" onclick="quickSearch('ランキング')">Ranking</button>
-    <button class="tag-button" onclick="quickSearch('新作')">New</button>
-    <button class="tag-button" onclick="quickSearch('人気')">Popular</button>
+      <div class="tags">
+        <button class="tag-button" onclick="quickSearch('ランキング')">Ranking</button>
+        <button class="tag-button" onclick="quickSearch('新作')">New</button>
+        <button class="tag-button" onclick="quickSearch('人気')">Popular</button>
+      </div>
+    </div>
+
+    <p class="notice">This site helps you search and discover content.<br>Search results are provided by external services.</p>
   </div>
 
   <script>
