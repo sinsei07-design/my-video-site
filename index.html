@@ -6,10 +6,13 @@
   <style>
     body {
       font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
-      background: linear-gradient(180deg, #ffe4ec 0%, #fff5f7 40%, #f7f8fa 100%);
+      background-image: linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.75)), url('https://source.unsplash.com/1600x900/?sakura,cherryblossom');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: #222222;
       text-align: center;
-      padding-top: 50px;
+      padding-top: 60px;
       margin: 0;
       min-height: 100vh;
     }
@@ -18,26 +21,21 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-    .petals {
-      font-size: 24px;
-      margin-bottom: 10px;
-      letter-spacing: 12px;
-    }
     h1 {
       font-size: 32px;
       margin-bottom: 8px;
       color: #333333;
     }
     p.subtitle {
-      color: #777777;
+      color: #555555;
       margin-bottom: 30px;
       font-size: 15px;
     }
     .search-area {
-      background-color: #ffffff;
+      background-color: rgba(255, 255, 255, 0.92);
       border-radius: 12px;
       padding: 30px 20px;
-      box-shadow: 0 4px 16px rgba(255, 182, 193, 0.3);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     }
     input {
       padding: 12px;
@@ -78,16 +76,19 @@
     }
     .notice {
       margin-top: 30px;
-      color: #999999;
+      color: #666666;
       font-size: 12px;
       line-height: 1.6;
+      background-color: rgba(255,255,255,0.7);
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <div class="petals">🌸 🌸 🌸</div>
     <h1>JP Vault Video</h1>
     <p class="subtitle">Discover and search Japanese videos, made simple</p>
 
