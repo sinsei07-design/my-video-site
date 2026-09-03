@@ -251,54 +251,54 @@
 
   <div class="container">
     <h1>JP Vault Video</h1>
-    <p class="subtitle">Discover and search Japanese videos, made simple</p>
+    <p class="subtitle">お探しの動画を、かんたん検索</p>
 
     <div class="search-area">
-      <input type="text" id="searchBox" placeholder="Search...">
-      <button onclick="doSearch()">Search</button>
+      <input type="text" id="searchBox" placeholder="キーワードを入力">
+      <button onclick="doSearch()">検索</button>
 
       <div class="tags">
-        <button class="tag-button" onclick="quickSearch('ランキング')">Ranking</button>
-        <button class="tag-button" onclick="quickSearch('新作')">New</button>
-        <button class="tag-button" onclick="quickSearch('人気')">Popular</button>
-        <button class="tag-button" onclick="quickSearch('素人')">Amateur</button>
-        <button class="tag-button" onclick="quickSearch('高画質')">HD</button>
-        <button class="tag-button" onclick="quickSearch('おすすめ')">Recommended</button>
+        <button class="tag-button" onclick="quickSearch('ランキング')">ランキング</button>
+        <button class="tag-button" onclick="quickSearch('新作')">新作</button>
+        <button class="tag-button" onclick="quickSearch('人気')">人気</button>
+        <button class="tag-button" onclick="quickSearch('素人')">素人</button>
+        <button class="tag-button" onclick="quickSearch('高画質')">高画質</button>
+        <button class="tag-button" onclick="quickSearch('おすすめ')">おすすめ</button>
       </div>
     </div>
 
     <div class="popular-area">
-      <h2>Popular searches</h2>
+      <h2>人気検索ワード</h2>
       <ul class="popular-list">
-        <li onclick="quickSearch('コスプレ')"><span class="rank-num">1</span>Cosplay</li>
-        <li onclick="quickSearch('制服')"><span class="rank-num">2</span>School uniform</li>
-        <li onclick="quickSearch('和服')"><span class="rank-num">3</span>Kimono</li>
-        <li onclick="quickSearch('メイド')"><span class="rank-num">4</span>Maid</li>
-        <li onclick="quickSearch('巫女')"><span class="rank-num">5</span>Shrine maiden</li>
+        <li onclick="quickSearch('コスプレ')"><span class="rank-num">1</span>コスプレ</li>
+        <li onclick="quickSearch('制服')"><span class="rank-num">2</span>制服</li>
+        <li onclick="quickSearch('和服')"><span class="rank-num">3</span>和服</li>
+        <li onclick="quickSearch('メイド')"><span class="rank-num">4</span>メイド</li>
+        <li onclick="quickSearch('巫女')"><span class="rank-num">5</span>巫女</li>
       </ul>
     </div>
 
     <div class="articles-area">
-      <h2>Articles &amp; Guides</h2>
-      <a class="article-link" href="guide.html">How to Use JP Vault Video</a>
-      <a class="article-link" href="culture.html">Popular Japanese Costume Genres</a>
-      <a class="article-link" href="cosplay-guide.html">A Guide to Enjoying Japanese Cosplay Content</a>
+      <h2>コラム・ガイド</h2>
+      <a class="article-link" href="guide.html">サイトの使い方ガイド</a>
+      <a class="article-link" href="culture.html">人気コスチュームジャンル紹介</a>
+      <a class="article-link" href="cosplay-guide.html">コスプレコンテンツの楽しみ方</a>
     </div>
 
     <div class="footer-links">
-      <a href="about.html">About</a> |
-      <a href="contact.html">Contact</a> |
-      <a href="privacy.html">Privacy Policy</a>
+      <a href="about.html">このサイトについて</a> |
+      <a href="contact.html">お問い合わせ</a> |
+      <a href="privacy.html">プライバシーポリシー</a>
     </div>
 
-    <p class="notice">This site helps you search and discover content.<br>Search results are provided by external services.</p>
+    <p class="notice">このサイトはコンテンツの検索をサポートします。<br>検索結果は外部サービスにより提供されます。</p>
   </div>
 
   <script>
     function doSearch() {
       var keyword = document.getElementById("searchBox").value;
       if (keyword === "") {
-        alert("Please enter a search word");
+        alert("検索ワードを入力してください");
         return;
       }
       openDmmSearch(keyword);
